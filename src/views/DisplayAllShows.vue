@@ -1,9 +1,13 @@
 <template>
 <b-container>
+    <div><h4>
+        <strong>This application will display all popular shows and all shows based on genres
+        </strong>
+        </h4>
     <div v-if="popularShows.length>0">
-        <h3>Popular Shows</h3> 
+        <h3 class="text">Popular Shows</h3> 
         <div>
-            <b-row class="row">
+            <b-row >
                 <b-col lg="2" md="4" sm="6"
                 v-for="popular in popularShows" :key="popular.index" >
                 <card :show="popular"></card>
@@ -11,8 +15,6 @@
             </b-row>
         </div>
     </div>
-    <!-- for intially to load data it will take some time upto that time yellow color spin will come and
-    after data was loaded the images will come-->
     <div v-else>
         <div class="d-flex justify-content-center mb-3 spin">
         <b-spinner class="spinner" variant="success" type="grow"></b-spinner>
@@ -20,16 +22,17 @@
     </div>
     <div v-if="genres.length>0">
         <div v-for="genre in genres" :key="genre.index">
-            <h3> {{genre.name}}</h3>
+            <h3 class="text"> {{genre.name}}</h3>
             <div>
                 <b-row>
                     <b-col lg="2" md="4" sm="6"
                     v-for="show in genre.shows" :key="show.index">
-                    <card :show="show"></card>
+                    <card  :show="show"></card>
                     </b-col>
                 </b-row>
             </div>
         </div>
+    </div>
     </div>
 </b-container>
 </template>
@@ -87,5 +90,13 @@ import {getAllShows} from "../service/tvShow.api.js";
 </script>
 
 <style scoped>
-
+h4 {
+  color: rgb(80, 5, 255);
+  padding-top: 10px;
+  text-align: left;
+  padding-left: 10px;
+}
+.text {
+  color: rgb(30, 1, 12);
+}
 </style>

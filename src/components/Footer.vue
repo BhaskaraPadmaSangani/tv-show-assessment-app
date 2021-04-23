@@ -1,7 +1,7 @@
 <template>
   <b-container fluid class="footer">
     Copyright &copy; {{ getFormattedDate() }} —
-    <strong>Tv Show Applicarion</strong>
+    <strong>TvMaze.All Rights Reserved.</strong>
   </b-container>
 </template>
 

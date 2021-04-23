@@ -11,9 +11,9 @@
           <span>
             <b-icon icon="star-fill" class="star-icon mx-1"></b-icon>
           </span>
-          <span v-if="show.rating.average">
-            {{ show.rating.average }}
-          </span>
+          <span class="text show-average" v-if="show.rating.average">
+          {{ show.rating.average }}
+        </span>
           <span v-else class="text"> NA </span>
           <span class="mx-2 text">|</span>
           <span>
@@ -22,10 +22,10 @@
           <span class="text show-premiered" v-if="show.premiered">
             {{ show.premiered }}
           </span>
-          <span v-else class="text"> NA </span>
-          <div>
-            {{ show.genres.join(",") }}
-          </div>
+          <span v-else class="text "> NA </span>
+          <div class="show-genres">
+          {{ show.genres.join(", ") }}
+        </div>
         </div>
       </div>
     </router-link>
@@ -36,9 +36,6 @@
 export default {
   name: "Card",
   props: ["show"],
-  data() {
-    return {};
-  },
 };
 </script>
 
@@ -46,4 +43,5 @@ export default {
 img:hover {
   opacity: 0.8;
 }
+
 </style>

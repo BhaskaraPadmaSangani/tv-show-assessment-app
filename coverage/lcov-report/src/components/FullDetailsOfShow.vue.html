@@ -22,9 +22,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/14</span>
+                <span class='fraction'>14/14</span>
             </div>
         
             
@@ -36,16 +36,16 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/6</span>
+                <span class='fraction'>6/6</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/14</span>
+                <span class='fraction'>14/14</span>
             </div>
         
             
@@ -54,7 +54,7 @@
             Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
         </p>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -341,9 +341,9 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -356,7 +356,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -366,22 +366,22 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -508,9 +508,9 @@
 &lt;/template&gt;
 &nbsp;
 &lt;script&gt;
-<span class="cstat-no" title="statement not covered" >import Season from "./Season.vue";</span>
-<span class="cstat-no" title="statement not covered" >import Cast from "./Cast.vue";</span>
-<span class="cstat-no" title="statement not covered" >import {</span>
+import Season from "./Season.vue";
+import Cast from "./Cast.vue";
+import {
   getShowDetails,
   getShowSeason,
   getShowCasts,
@@ -522,8 +522,8 @@ export default {
     Season,
      Cast
   },
-<span class="fstat-no" title="function not covered" >  data() {</span>
-<span class="cstat-no" title="statement not covered" >    return {</span>
+  data() {
+    return {
       show: {},
       casts: [],
       seasons: [],
@@ -532,23 +532,23 @@ export default {
       genre: ""
     };
   },
-<span class="fstat-no" title="function not covered" >  created() {</span>
-<span class="cstat-no" title="statement not covered" >    this.showDetails(this.$route.params.id);</span>
+  created() {
+    this.showDetails(this.$route.params.id);
   },
   methods: {
-<span class="fstat-no" title="function not covered" >    async showDetails(id) {</span>
-<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >      await getShowDetails(id).then((response) =&gt; {</span></span>
-<span class="cstat-no" title="statement not covered" >        this.show = response.data;</span>
+    async showDetails(id) {
+      await getShowDetails(id).then((response) =&gt; {
+        this.show = response.data;
       });
-<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >      await getShowSeason(id).then((response) =&gt; {</span></span>
-<span class="cstat-no" title="statement not covered" >        this.seasons = response.data;</span>
+      await getShowSeason(id).then((response) =&gt; {
+        this.seasons = response.data;
       });
-<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >      await getShowCasts(id).then((response) =&gt; {</span></span>
-<span class="cstat-no" title="statement not covered" >        this.casts = response.data;</span>
+      await getShowCasts(id).then((response) =&gt; {
+        this.casts = response.data;
       });
-<span class="cstat-no" title="statement not covered" >      this.rating = this.show.rating.average;</span>
-<span class="cstat-no" title="statement not covered" >      this.premiered = this.show.premiered;</span>
-<span class="cstat-no" title="statement not covered" >      this.genre = this.show.genres;</span>
+      this.rating = this.show.rating.average;
+      this.premiered = this.show.premiered;
+      this.genre = this.show.genres;
     }
   }
 };
@@ -564,7 +564,7 @@ export default {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Wed Apr 21 2021 10:07:53 GMT+0530 (India Standard Time)
+                at Thu Apr 22 2021 23:28:18 GMT+0530 (India Standard Time)
             </div>
         </div>
         <script src="..\..\prettify.js"></script>

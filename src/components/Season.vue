@@ -6,7 +6,7 @@ class="card-border"
 <div v-else class="card">
   <h3>Image Not Available</h3>
 </div>
-<div v-if="season.number">
+<div class="season-number" v-if="season.number">
   Season {{season.number}}
 </div>
 <div class=" mt-1" v-else>NA</div>
@@ -17,12 +17,5 @@ class="card-border"
   export default {
     name: "Season",
     props:["season"],
-      data() {
-    return {};
-  },
   };
 </script>
-
-<style scoped>
-
-</style>

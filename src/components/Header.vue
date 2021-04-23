@@ -1,12 +1,10 @@
 <template>
-    <div>
-    <b-navbar toggleable="sm">
-      <!--why we are using <router-link to="/"> when we use this only the data is going to
-      Search component for further operation if not no why???-->
+    <div class="margin">
+    <b-navbar>
       <router-link to="/">
      <b-navbar-brand class="navbar ml-1">
           <b-icon icon="camera-reels" class="navbar-icon"></b-icon>
-          TvShow Displaying
+          TvMaze
         </b-navbar-brand>
       </router-link>
         <b-collapse id="nav-collapse" is-nav>
@@ -45,15 +43,12 @@ export default {
   },
   methods: {
     search() {
-      //how the data is going to sarchquery as we are not assigning the data in form to sarch query 
-      //is the data will be directly assigned ?
       this.$router.push({
         name: "Search",
         params: {
           query: this.searchQuery
         }
       });
-      //is it again ur making the searchquery empty for taking new data after passing to search component
       this.searchQuery = "";
     }
   }
@@ -61,4 +56,7 @@ export default {
 </script>
 
 <style scoped>
+.margin{
+   margin-top: 5px;
+}
 </style>
