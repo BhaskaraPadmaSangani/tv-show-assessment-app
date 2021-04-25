@@ -1,4 +1,5 @@
-import { shallowMount } from "@vue/test-utils";
+import { shallowMount, createLocalVue } from "@vue/test-utils";
+import { BootstrapVue, IconsPlugin } from "bootstrap-vue";
 import Cast from "@/components/Cast.vue";
 import { showCast } from "../api-data.js";
 
@@ -6,12 +7,21 @@ describe("It is ued to test Cast.vue", () => {
   let cast;
   let wrapper;
   cast = Object.assign({}, showCast);
+  beforeEach(()=>{
+  const localVue = createLocalVue();
+  localVue.use(BootstrapVue);
+  localVue.use(IconsPlugin);
+
   wrapper = shallowMount(Cast, {
+    localVue,
     propsData: {
       cast
     }
   });
-
+  });
+  afterEach(() => {
+    wrapper.destroy();
+  });
   it("Used to display test cast person name", () => {
     expect(wrapper.find(".cast-person-name").exists()).toBe(true);
     expect(wrapper.find(".cast-person-name").text()).toBe(cast.person.name);

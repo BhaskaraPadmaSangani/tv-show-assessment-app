@@ -1,19 +1,14 @@
 <template>
-  <b-container fluid class="footer">
-    Copyright &copy; {{ getFormattedDate() }} —
+  <b-container fluid class="footer mt-4">
+    Copyright &copy; {{ new Date().getFullYear() }} —
     <strong>TvMaze.All Rights Reserved.</strong>
   </b-container>
 </template>
 
 <script>
-import formattedDate from "../filters/dateFilter.js";
+//import formattedDate from "../filters/dateFilter.js";
 export default {
-  name: "Footer",
-  methods: {
-    getFormattedDate() {
-      return formattedDate();
-    },
-  },
+  name: "Footer"
 };
 </script>
 <style scoped>
@@ -25,5 +20,8 @@ export default {
   color: #000;
   text-align: center;
   font-size: 0.8em;
+}
+.mt-4{
+    margin-top:-20px;
 }
 </style>

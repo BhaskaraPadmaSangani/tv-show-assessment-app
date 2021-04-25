@@ -223,7 +223,54 @@
 <a name='L165'></a><a href='#L165'>165</a>
 <a name='L166'></a><a href='#L166'>166</a>
 <a name='L167'></a><a href='#L167'>167</a>
-<a name='L168'></a><a href='#L168'>168</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L168'></a><a href='#L168'>168</a>
+<a name='L169'></a><a href='#L169'>169</a>
+<a name='L170'></a><a href='#L170'>170</a>
+<a name='L171'></a><a href='#L171'>171</a>
+<a name='L172'></a><a href='#L172'>172</a>
+<a name='L173'></a><a href='#L173'>173</a>
+<a name='L174'></a><a href='#L174'>174</a>
+<a name='L175'></a><a href='#L175'>175</a>
+<a name='L176'></a><a href='#L176'>176</a>
+<a name='L177'></a><a href='#L177'>177</a>
+<a name='L178'></a><a href='#L178'>178</a>
+<a name='L179'></a><a href='#L179'>179</a>
+<a name='L180'></a><a href='#L180'>180</a>
+<a name='L181'></a><a href='#L181'>181</a>
+<a name='L182'></a><a href='#L182'>182</a>
+<a name='L183'></a><a href='#L183'>183</a>
+<a name='L184'></a><a href='#L184'>184</a>
+<a name='L185'></a><a href='#L185'>185</a>
+<a name='L186'></a><a href='#L186'>186</a>
+<a name='L187'></a><a href='#L187'>187</a>
+<a name='L188'></a><a href='#L188'>188</a>
+<a name='L189'></a><a href='#L189'>189</a>
+<a name='L190'></a><a href='#L190'>190</a>
+<a name='L191'></a><a href='#L191'>191</a>
+<a name='L192'></a><a href='#L192'>192</a>
+<a name='L193'></a><a href='#L193'>193</a>
+<a name='L194'></a><a href='#L194'>194</a>
+<a name='L195'></a><a href='#L195'>195</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -382,6 +429,13 @@
 <span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -393,74 +447,102 @@
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">&lt;template&gt;
   &lt;div class="show-detail"&gt;
     &lt;b-row&gt;
-    &lt;div class="ml-3  backButton"&gt;
-      &lt;b-button variant="success" @click="$router.go(-1)"&gt;
-        &lt;b-icon icon="arrow-left"&gt;&lt;/b-icon&gt;
-      &lt;/b-button&gt;
-    &lt;/div&gt;
+      &lt;div class="ml-3 backButton"&gt;
+        &lt;div&gt;
+        &lt;b-button  class="mt-4" variant="success" @click="$router.go(-1)"&gt;
+          &lt;b-icon icon="arrow-left"&gt;&lt;/b-icon&gt;
+        &lt;/b-button&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
     &lt;/b-row&gt;
     &lt;br /&gt;
     &lt;template v-if="show"&gt;
       &lt;b-container fluid&gt;
+        &lt;!--&lt;b-row&gt;
+          &lt;p class="align-poster"&gt; Show Poster&lt;/p&gt;&lt;/b-row&gt;--&gt;
         &lt;b-row&gt;
           &lt;b-col lg="4" md="6" sm="6"&gt;
-            &lt;img
+             &lt;p class="align-poster"&gt; Show Poster&lt;/p&gt;
+            &lt;img Show Image
               :src="show.image.medium || show.image.original"
-              v-if="show.image"/&gt;
-            &lt;div v-else &gt;
+              v-if="show.image"
+            /&gt;
+            &lt;div v-else&gt;
               &lt;h3&gt;Image Not Available&lt;/h3&gt;
             &lt;/div&gt;
           &lt;/b-col&gt;
           &lt;b-col lg="8" md="6" sm="6"&gt;
-            &lt;h2 &gt;{{ show.name }}
-            &lt;/h2&gt;
-            &lt;div&gt;
+            &lt;!--&lt;div class="text" type="dark" variant="info"&gt;&lt;h2&gt;&lt;b&gt;Full Details Of Show&lt;/b&gt;&lt;/h2&gt;&lt;/div&gt;
+            // help me in coloring--&gt;
+            
+            &lt;div class="text-warning"&gt;&lt;h2&gt;&lt;b&gt;Full Details Of Show&lt;/b&gt;&lt;/h2&gt;&lt;/div&gt;
+             &lt;!--&lt;div class="text"&gt;Full Details Of Show&lt;/div&gt;--&gt;
+            &lt;h3&gt;{{ show.name }}&lt;/h3&gt;
+            &lt;div class="align"&gt;
               &lt;span&gt;
+                &lt;b&gt;Rating: &lt;/b&gt;
                 &lt;b-icon icon="star-fill" class="star-icon"&gt;&lt;/b-icon&gt;
               &lt;/span&gt;
-              &lt;span class="ml-1" v-if="this.rating"&gt;
+              &lt;span class="ml-1" v-if="show.rating"&gt;
                 {{ show.rating.average }}
               &lt;/span&gt;
               &lt;span v-else class="ml-1"&gt;NA&lt;/span&gt;
-              &lt;span class="mx-2"&gt;|&lt;/span&gt;
+              &lt;div&gt;
               &lt;span&gt;
-                &lt;b-icon icon="calendar"&gt;&lt;/b-icon&gt;
+                &lt;b&gt;premiered on:&lt;/b&gt;
               &lt;/span&gt;
-              &lt;span
-                v-if="this.premiered"
-              &gt;
+              &lt;span v-if="show.premiered"&gt;
                 {{ show.premiered }}
               &lt;/span&gt;
               &lt;span v-else class="ml-1"&gt;NA&lt;/span&gt;
-              &lt;span class="mx-2"&gt;|&lt;/span&gt;
+              &lt;/div&gt;
               &lt;span&gt;
-                &lt;b-icon icon="film"&gt;&lt;/b-icon&gt;
+                &lt;b&gt;Genre :&lt;/b&gt;
               &lt;/span&gt;
-              &lt;span
-                class="show-genres ml-1 "
-                v-if="this.genre.length &gt; 0"
-              &gt;
+              &lt;span class="show-genres ml-1" v-if="this.genre.length &gt; 0"&gt;
                 {{ show.genres.join() }}
               &lt;/span&gt;
-              &lt;span v-else class="ml-1 "&gt;NA&lt;/span&gt;
+              &lt;span v-else class="ml-1"&gt;NA&lt;/span&gt;
+              &lt;div&gt;
+                &lt;span v-if="show.language"&gt;
+                  &lt;b&gt;Language :&lt;/b&gt;{{show.language}}&lt;/span&gt;
+              &lt;/div&gt;
+              &lt;!--
+                //when i kept this in seson and cast red color is comming why?--&gt;
+                &lt;div v-if="show.schedule"&gt;
+                &lt;b&gt;Schedule :&lt;/b&gt;
+                &lt;span
+                  v-for="tvSchedule in show.schedule.days"
+                  :key="tvSchedule.index"
+                &gt;
+    
+                  {{tvSchedule}}
+                  &lt;span v-if="show.schedule.time"&gt; at {{show.schedule.time}}&lt;/span&gt;
+                   &lt;/span&gt;
+            &lt;/div&gt;
+              &lt;div&gt;
+                 &lt;span class="black--text" v-if="show.status"&gt;
+                &lt;b&gt;Status :&lt;/b&gt;
+                {{show.status}}
+              &lt;/span&gt;
+              &lt;/div&gt;
+              &lt;div&gt;
+                &lt;span class="black--text" v-if="show.officialSite"&gt;
+                &lt;b&gt;Official Site :&lt;/b&gt; 
+                &lt;a :href="show.officialSite"&gt;{{show.officialSite}}&lt;/a&gt;
+              &lt;/span&gt;
+              &lt;/div&gt;
             &lt;/div&gt;
             &lt;div class="mt-5 summary"&gt;
-              &lt;h2&gt;
-              Summary
-              &lt;/h2&gt;
-              &lt;p
-                v-if="show.summary"
-                v-html="show.summary"
-              &gt;&lt;/p&gt;
+              &lt;h2&gt;Summary&lt;/h2&gt;
+              &lt;p v-if="show.summary" v-html="show.summary"&gt;&lt;/p&gt;
               &lt;p v-else&gt;Not Available&lt;/p&gt;
             &lt;/div&gt;
           &lt;/b-col&gt;
         &lt;/b-row&gt;
       &lt;/b-container&gt;
       &lt;div&gt;
-        &lt;h2&gt;
-        Seasons
-        &lt;/h2&gt;
+        &lt;h2&gt;Seasons&lt;/h2&gt;
         &lt;template v-if="seasons.length &gt; 0"&gt;
           &lt;b-row&gt;
             &lt;b-col
@@ -481,18 +563,10 @@
         &lt;/template&gt;
       &lt;/div&gt;
       &lt;div&gt;
-        &lt;h2&gt;
-           Cast
-        &lt;/h2&gt;
+        &lt;h2&gt;Cast&lt;/h2&gt;
         &lt;template v-if="casts.length &gt; 0"&gt;
           &lt;b-row&gt;
-            &lt;b-col
-              lg="3"
-              md="4"
-              sm="6"
-              v-for="cast in casts"
-              :key="cast.index"
-            &gt;
+            &lt;b-col lg="3" md="4" sm="6" v-for="cast in casts" :key="cast.index"&gt;
               &lt;cast :cast="cast"&gt; &lt;/cast&gt;
             &lt;/b-col&gt;
           &lt;/b-row&gt;
@@ -520,7 +594,7 @@ export default {
   name: "FullDetailsOfShow",
   components: {
     Season,
-     Cast
+    Cast,
   },
   data() {
     return {
@@ -529,7 +603,7 @@ export default {
       seasons: [],
       rating: "",
       premiered: "",
-      genre: ""
+      genre: "",
     };
   },
   created() {
@@ -549,13 +623,20 @@ export default {
       this.rating = this.show.rating.average;
       this.premiered = this.show.premiered;
       this.genre = this.show.genres;
-    }
-  }
+    },
+  },
 };
 &lt;/script&gt;
 &nbsp;
 &lt;style scoped&gt;
-&nbsp;
+.align{
+  text-align: left;
+  margin-left:30%;
+}
+.align-poster{
+  text-align: center;
+ margin-left: 10px !important
+}
 &lt;/style&gt;
 &nbsp;</pre></td></tr></table></pre>
 
@@ -564,7 +645,7 @@ export default {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Thu Apr 22 2021 23:28:18 GMT+0530 (India Standard Time)
+                at Sun Apr 25 2021 09:40:47 GMT+0530 (India Standard Time)
             </div>
         </div>
         <script src="..\..\prettify.js"></script>

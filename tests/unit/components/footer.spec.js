@@ -19,7 +19,7 @@ describe("Footer.vue", () => {
   it("is a Vue instance", () => {
     expect(footerWrapper.isVueInstance).toBeTruthy();
   });
-  it("contain footer ", () => {
+  it("To check whether it contain footer ", () => {
     expect(footerWrapper.find(".footer").exists()).toBe(true);
   });
 });

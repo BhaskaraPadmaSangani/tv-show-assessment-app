@@ -45,7 +45,7 @@ describe("In FullDetailsOfShow Component", () => {
     expect(wrapper.vm.show).not.toBe(undefined);
     expect(wrapper.vm.casts).not.toBe(undefined);
   });
-  it("testing show detail data by id", () => {
+  it("testing show detail data by using id", () => {
     expect(wrapper.vm.show.id).toBe(134);
   });
 });

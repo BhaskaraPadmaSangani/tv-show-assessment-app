@@ -13,7 +13,7 @@
     </div>
     <div class="heading">
       <h2>
-        <em>!!!!!!! Tv Show your are searching for are  not found !!!!!!!!</em>
+        <em>!!!!!!! Tv Show your are searching for are not found !!!!!!!!</em>
       </h2>
     </div>
   </div>
@@ -22,9 +22,6 @@
 <script>
 export default {
   name: "pagenotfound",
-  data() {
-    return {};
-  },
 };
 </script>
 <style scoped>

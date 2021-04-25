@@ -6,36 +6,35 @@ import Search from "../components/Search.vue";
 import PageNotFound from "../components/PageNotFound.vue";
 
 Vue.use(VueRouter);
- 
-const routes=[
-    {
-        path: "/",
-        name: "DisplayAllShows",
-        component: DisplayAllShows
-    },
-    {
-        path: "/shows/:id",
-        name: "FullDetailsOfShow",
-        props: true,
-        component: FullDetailsOfShow
-    },
-    {
-        path: "/search/:query",
-        name: "Search",
-        component: Search
-      },
-    {
-        path: "*",
-        name: "page-not-found",
-        component: PageNotFound
-      }
+
+const routes = [
+  {
+    path: "/",
+    name: "DisplayAllShows",
+    component: DisplayAllShows
+  },
+  {
+    path: "/shows/:id",
+    name: "FullDetailsOfShow",
+    props: true,
+    component: FullDetailsOfShow
+  },
+  {
+    path: "/search/:query",
+    name: "Search",
+    component: Search
+  },
+  {
+    path: "*",
+    name: "page-not-found",
+    component: PageNotFound
+  }
 ];
 
 const router = new VueRouter({
-    mode: "history",
-    base: process.env.BASE_URL,
-    routes,
-  });
-  
-  export default router;
-  
+  mode: "history",
+  base: process.env.BASE_URL,
+  routes,
+});
+
+export default router;

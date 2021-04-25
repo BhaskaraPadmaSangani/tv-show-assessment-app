@@ -157,7 +157,45 @@
 <a name='L99'></a><a href='#L99'>99</a>
 <a name='L100'></a><a href='#L100'>100</a>
 <a name='L101'></a><a href='#L101'>101</a>
-<a name='L102'></a><a href='#L102'>102</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L102'></a><a href='#L102'>102</a>
+<a name='L103'></a><a href='#L103'>103</a>
+<a name='L104'></a><a href='#L104'>104</a>
+<a name='L105'></a><a href='#L105'>105</a>
+<a name='L106'></a><a href='#L106'>106</a>
+<a name='L107'></a><a href='#L107'>107</a>
+<a name='L108'></a><a href='#L108'>108</a>
+<a name='L109'></a><a href='#L109'>109</a>
+<a name='L110'></a><a href='#L110'>110</a>
+<a name='L111'></a><a href='#L111'>111</a>
+<a name='L112'></a><a href='#L112'>112</a>
+<a name='L113'></a><a href='#L113'>113</a>
+<a name='L114'></a><a href='#L114'>114</a>
+<a name='L115'></a><a href='#L115'>115</a>
+<a name='L116'></a><a href='#L116'>116</a>
+<a name='L117'></a><a href='#L117'>117</a>
+<a name='L118'></a><a href='#L118'>118</a>
+<a name='L119'></a><a href='#L119'>119</a>
+<a name='L120'></a><a href='#L120'>120</a>
+<a name='L121'></a><a href='#L121'>121</a>
+<a name='L122'></a><a href='#L122'>122</a>
+<a name='L123'></a><a href='#L123'>123</a>
+<a name='L124'></a><a href='#L124'>124</a>
+<a name='L125'></a><a href='#L125'>125</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -239,6 +277,8 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">45x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -258,95 +298,120 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">&lt;template&gt;
-&lt;b-container&gt;
-    &lt;div&gt;&lt;h4&gt;
-        &lt;strong&gt;This application will display all popular shows and all shows based on genres
+  &lt;b-container&gt;
+    &lt;div&gt;
+      &lt;h4&gt;
+        &lt;strong
+          &gt;This application will display all popular shows and all shows based
+          on genres
         &lt;/strong&gt;
-        &lt;/h4&gt;
-    &lt;div v-if="popularShows.length&gt;0"&gt;
-        &lt;h3 class="text"&gt;Popular Shows&lt;/h3&gt; 
+      &lt;/h4&gt;
+      &lt;div v-if="popularShows.length &gt; 0"&gt;
+        &lt;h3 class="text"&gt;Popular Shows&lt;/h3&gt;
         &lt;div&gt;
-            &lt;b-row &gt;
-                &lt;b-col lg="2" md="4" sm="6"
-                v-for="popular in popularShows" :key="popular.index" &gt;
-                &lt;card :show="popular"&gt;&lt;/card&gt;
-                &lt;/b-col&gt;
-            &lt;/b-row&gt;
+          &lt;!--this is for based on screen size--&gt;
+            &lt;b-row&gt;
+            &lt;b-col
+              lg="2"
+              md="4"
+              sm="6"
+              v-for="popular in popularShows"
+              :key="popular.index"
+              class="myColumn"
+            &gt;
+              &lt;card :show="popular"&gt;&lt;/card&gt;
+            &lt;/b-col&gt;
+          &lt;/b-row&gt;
         &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div v-else&gt;
+      &lt;/div&gt;
+      &lt;div v-else&gt;
         &lt;div class="d-flex justify-content-center mb-3 spin"&gt;
-        &lt;b-spinner class="spinner" variant="success" type="grow"&gt;&lt;/b-spinner&gt;
+          &lt;b-spinner class="spinner" variant="success" type="grow"&gt;&lt;/b-spinner&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div v-if="genres.length &gt; 0"&gt;
+        &lt;div v-for="genre in genres" :key="genre.index"&gt;
+          &lt;h3 class="text"&gt;{{ genre.name }}&lt;/h3&gt;
+          &lt;div&gt;
+            &lt;b-row&gt;
+              &lt;b-col
+                lg="2"
+                md="4"
+                sm="6"
+                v-for="show in genre.shows"
+                :key="show.index" class="myColumn"
+              &gt;
+                &lt;card :show="show"&gt;&lt;/card&gt;
+              &lt;/b-col&gt;
+            &lt;/b-row&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
       &lt;/div&gt;
     &lt;/div&gt;
-    &lt;div v-if="genres.length&gt;0"&gt;
-        &lt;div v-for="genre in genres" :key="genre.index"&gt;
-            &lt;h3 class="text"&gt; {{genre.name}}&lt;/h3&gt;
-            &lt;div&gt;
-                &lt;b-row&gt;
-                    &lt;b-col lg="2" md="4" sm="6"
-                    v-for="show in genre.shows" :key="show.index"&gt;
-                    &lt;card  :show="show"&gt;&lt;/card&gt;
-                    &lt;/b-col&gt;
-                &lt;/b-row&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;/div&gt;
-&lt;/b-container&gt;
+  &lt;/b-container&gt;
 &lt;/template&gt;
 &nbsp;
 &lt;script&gt;
 import Card from "../components/Card.vue";
-import {getAllShows} from "../service/tvShow.api.js";
-    export default {
-        name: "DisplayAllShows",
-        data() {
-            return {
-                shows: [],
-                popularShows: []
-            };
-        },
-        components:{
-            Card
-        },
-        mounted() {
-        getAllShows().then((response)=&gt;{
-            this.shows=response.data;
-            this.popularShows=this.mostRatedShows(this.shows);
-        });
-        },
-        computed:{
-         genresTitle(){
-             const genre= Array.from(
-                 new Set(this.shows.flatMap(show=&gt;show.genres))
-             );
-             return genre.sort();
-         },
-         genres(){
-            return  this.genresTitle.map(genre=&gt;{
-                 return {
-                     //Action is stored in name first
-                     name: genre,
-                     //from a-z 1 show name is passed if that show contains this action genre then this is
-                     //sorted based on average by passing it to mostratedshow() method and again stored in shows 
-                     //data propertie for printing.
-                     shows: this.mostRatedShows(this.shows.filter(show=&gt;show.genres.includes(genre)))
-                 };
-             });
-         }
-        },
-        methods: {
-            mostRatedShows(shows)
-            {
-               return shows
-               .filter(show=&gt;show.rating.average)
-               .sort((previousValue,nextValue)=&gt;
-               previousValue.rating.average&lt;nextValue.rating.average?1:-1).slice(0,20);
-            }
-        }  
+import { getAllShows } from "../service/tvShow.api.js";
+export default {
+  name: "DisplayAllShows",
+  data() {
+    return {
+      shows: [],
+      popularShows: [],
     };
+  },
+  components: {
+    Card,
+  },
+  mounted() {
+    getAllShows().then((response) =&gt; {
+      this.shows = response.data;
+      this.popularShows = this.mostRatedShows(this.shows);
+    });
+  },
+  computed: {
+    genresTitle() {
+      const genre = Array.from(
+        new Set(this.shows.flatMap((show) =&gt; show.genres))
+      );
+      return genre.sort();
+    },
+    genres() {
+      return this.genresTitle.map((genre) =&gt; {
+        return {
+          //Action is stored in name first
+          name: genre,
+          //from a-z 1 show name is passed if that show contains this action genre then this is
+          //sorted based on average by passing it to mostratedshow() method and again stored in shows
+          //data propertie for printing.
+          shows: this.mostRatedShows(
+            this.shows.filter((show) =&gt; show.genres.includes(genre))
+          ),
+        };
+      });
+    },
+  },
+  methods: {
+    // method to sort all shows based on rating
+    mostRatedShows(shows) {
+      return shows
+        .filter((show) =&gt; show.rating.average)
+        .sort((previousValue, nextValue) =&gt;
+          previousValue.rating.average &lt; nextValue.rating.average ? 1 : -1
+        )
+        .slice(0, 20);
+    },
+  },
+};
 &lt;/script&gt;
 &nbsp;
 &lt;style scoped&gt;
@@ -359,6 +424,10 @@ h4 {
 .text {
   color: rgb(30, 1, 12);
 }
+.myColumn{
+margin-bottom:10px;
+margin-top:10px;
+}
 &lt;/style&gt;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
@@ -366,7 +435,7 @@ h4 {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Thu Apr 22 2021 23:28:18 GMT+0530 (India Standard Time)
+                at Sun Apr 25 2021 09:40:47 GMT+0530 (India Standard Time)
             </div>
         </div>
         <script src="..\..\prettify.js"></script>

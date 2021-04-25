@@ -1,27 +1,22 @@
 <template>
-    <div class="margin">
-    <b-navbar>
+  <div>
+    <b-navbar  toggleable="lg" type="dark" variant="info">
       <router-link to="/">
-     <b-navbar-brand class="navbar ml-1">
-          <b-icon icon="camera-reels" class="navbar-icon"></b-icon>
+        <b-navbar-brand class="navbar ml-1">
           TvMaze
         </b-navbar-brand>
       </router-link>
-        <b-collapse id="nav-collapse" is-nav>
+      <b-collapse id="nav-collapse" is-nav>
         <b-navbar-nav class="ml-auto">
           <b-nav-form>
             <b-row>
-              <b-col>
-                <b-form-input
-                  size="sm"
-                  class="mr-sm-2"
+                <b-form-input class="mr-1"
                   placeholder="Search"
                   v-model="searchQuery"
                 ></b-form-input>
-              </b-col>
               <b-button
                 size="sm"
-                class="bg-dark border-dark  btn-search"
+                class="bg-dark border-dark btn-search"
                 @click="search()"
                 ><b-icon icon="search" class="text-white search-icon"></b-icon
               ></b-button>
@@ -30,7 +25,7 @@
         </b-navbar-nav>
       </b-collapse>
     </b-navbar>
-    </div>
+  </div>
 </template>
 
 <script>
@@ -38,7 +33,7 @@ export default {
   name: "Header",
   data() {
     return {
-      searchQuery: ""
+      searchQuery: "",
     };
   },
   methods: {
@@ -46,17 +41,11 @@ export default {
       this.$router.push({
         name: "Search",
         params: {
-          query: this.searchQuery
-        }
+          query: this.searchQuery,
+        },
       });
       this.searchQuery = "";
-    }
-  }
+    },
+  },
 };
 </script>
-
-<style scoped>
-.margin{
-   margin-top: 5px;
-}
-</style>

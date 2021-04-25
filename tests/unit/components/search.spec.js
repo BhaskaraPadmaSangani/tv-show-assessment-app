@@ -28,11 +28,8 @@ jest.mock("axios", () => ({
       ]
     })
 }));
-// import moxios from "moxios";
-// import {
-//   searchedShows,
-// } from "../testing-data.js";
-describe("Search.vue", () => {
+
+describe("Search.vue component testing", () => {
   let searchWrapper;
   const router = new VueRouter({ routes });
   beforeEach(() => {
@@ -40,7 +37,6 @@ describe("Search.vue", () => {
     localVue.use(VueRouter);
     localVue.use(BootstrapVue);
     localVue.use(IconsPlugin);
-    // moxios.install();
     searchWrapper = shallowMount(search, {
       localVue,
       router
@@ -49,7 +45,6 @@ describe("Search.vue", () => {
 
   afterEach(() => {
     searchWrapper.destroy();
-    // moxios.uninstall();
   });
   it("is a Vue instance", () => {
     expect(searchWrapper.isVueInstance).toBeTruthy();

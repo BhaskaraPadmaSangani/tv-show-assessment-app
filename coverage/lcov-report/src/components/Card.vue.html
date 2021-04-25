@@ -22,9 +22,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>1/1</span>
+                <span class='fraction'>0/1</span>
             </div>
         
             
@@ -36,16 +36,16 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>1/1</span>
+                <span class='fraction'>0/1</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>1/1</span>
+                <span class='fraction'>0/1</span>
             </div>
         
             
@@ -54,7 +54,7 @@
             Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
         </p>
     </div>
-    <div class='status-line high'></div>
+    <div class='status-line low'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -104,7 +104,28 @@
 <a name='L46'></a><a href='#L46'>46</a>
 <a name='L47'></a><a href='#L47'>47</a>
 <a name='L48'></a><a href='#L48'>48</a>
-<a name='L49'></a><a href='#L49'>49</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L49'></a><a href='#L49'>49</a>
+<a name='L50'></a><a href='#L50'>50</a>
+<a name='L51'></a><a href='#L51'>51</a>
+<a name='L52'></a><a href='#L52'>52</a>
+<a name='L53'></a><a href='#L53'>53</a>
+<a name='L54'></a><a href='#L54'>54</a>
+<a name='L55'></a><a href='#L55'>55</a>
+<a name='L56'></a><a href='#L56'>56</a>
+<a name='L57'></a><a href='#L57'>57</a>
+<a name='L58'></a><a href='#L58'>58</a>
+<a name='L59'></a><a href='#L59'>59</a>
+<a name='L60'></a><a href='#L60'>60</a>
+<a name='L61'></a><a href='#L61'>61</a>
+<a name='L62'></a><a href='#L62'>62</a>
+<a name='L63'></a><a href='#L63'>63</a>
+<a name='L64'></a><a href='#L64'>64</a>
+<a name='L65'></a><a href='#L65'>65</a>
+<a name='L66'></a><a href='#L66'>66</a>
+<a name='L67'></a><a href='#L67'>67</a>
+<a name='L68'></a><a href='#L68'>68</a>
+<a name='L69'></a><a href='#L69'>69</a>
+<a name='L70'></a><a href='#L70'>70</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -143,7 +164,28 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -153,36 +195,40 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">&lt;template&gt;
-  &lt;div class="mb-3 mt-4"&gt;
-    &lt;router-link :to="{ name: 'FullDetailsOfShow', params: { id: show.id } }"&gt;
-      &lt;img :src="show.image.medium || show.image.original" v-if="show.image" /&gt;
+  &lt;div class="mb-3 mt-4 myCard" &gt;
+        &lt;router-link :to="{ name: 'FullDetailsOfShow', params: { id: show.id } }"&gt;
+      &lt;img :src="show.image.medium || show.image.original" v-if="show.image" class="space" /&gt;
       &lt;div v-else&gt;
         &lt;h2&gt;Image Not Available&lt;/h2&gt;
       &lt;/div&gt;
-      &lt;div class="mt-1" v-if="show.name"&gt;
-        {{ show.name }}
+        &lt;div class="mt-1 buttonOrder" v-if="show.name"&gt;
+        &lt;h6&gt;{{ show.name }}&lt;/h6&gt;
         &lt;div class="mt-1"&gt;
+           &lt;!-- &lt;div class="mt-1"    variant="warning" v-if="show.name"&gt;
+       // want color to rating: and genre how???--&gt;
           &lt;span&gt;
+            &lt;b&gt;Rating: &lt;/b&gt;
             &lt;b-icon icon="star-fill" class="star-icon mx-1"&gt;&lt;/b-icon&gt;
           &lt;/span&gt;
           &lt;span class="text show-average" v-if="show.rating.average"&gt;
-          {{ show.rating.average }}
-        &lt;/span&gt;
-          &lt;span v-else class="text"&gt; NA &lt;/span&gt;
-          &lt;span class="mx-2 text"&gt;|&lt;/span&gt;
-          &lt;span&gt;
-            &lt;b-icon icon="calendar" class="mx-1 heading"&gt;&lt;/b-icon&gt;
+            {{ show.rating.average }}
           &lt;/span&gt;
+          &lt;span v-else class="text"&gt; NA &lt;/span&gt;
+          &lt;div&gt;
+            &lt;b-icon icon="calendar" class="mx-1 heading"&gt;&lt;/b-icon&gt;
           &lt;span class="text show-premiered" v-if="show.premiered"&gt;
             {{ show.premiered }}
           &lt;/span&gt;
-          &lt;span v-else class="text "&gt; NA &lt;/span&gt;
+          &lt;span v-else class="text"&gt; NA &lt;/span&gt;
+           &lt;/div&gt;
           &lt;div class="show-genres"&gt;
-          {{ show.genres.join(", ") }}
+            &lt;span&gt;&lt;b&gt;Genre: &lt;/b&gt;&lt;/span&gt;
+            {{ show.genres.join(", ") }}
+          &lt;/div&gt;
         &lt;/div&gt;
-        &lt;/div&gt;
+        &lt;!--&lt;b-button class="myButton" @click="displayCardDetails"&gt;GetMoreDetails&lt;/b-button&gt;--&gt;
       &lt;/div&gt;
-    &lt;/router-link&gt;
+        &lt;/router-link&gt;
   &lt;/div&gt;
 &lt;/template&gt;
 &nbsp;
@@ -190,15 +236,32 @@
 export default {
   name: "Card",
   props: ["show"],
-  data() {
-    return {};
-  },
+  methods:{
+<span class="fstat-no" title="function not covered" >    displayCardDetails(){</span>
+<span class="cstat-no" title="statement not covered" >    this.$router.push({ name: 'FullDetailsOfShow', params: { id: this.show.id } })</span>
+    }
+  }
 };
 &lt;/script&gt;
 &nbsp;
 &lt;style scoped&gt;
+.myCard{
+  height:100%;
+}
 img:hover {
   opacity: 0.8;
+}
+.space{
+width: 90%;
+}
+&nbsp;
+.buttonOrder{
+  position: relative;
+  height:100%;
+}
+.myButton{
+ position: relative;
+bottom:4px;
 }
 &lt;/style&gt;</pre></td></tr></table></pre>
 
@@ -207,7 +270,7 @@ img:hover {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Thu Apr 22 2021 12:55:53 GMT+0530 (India Standard Time)
+                at Sun Apr 25 2021 09:14:32 GMT+0530 (India Standard Time)
             </div>
         </div>
         <script src="..\..\prettify.js"></script>

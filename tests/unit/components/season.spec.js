@@ -7,8 +7,8 @@ describe("It is ued to test Season.vue", () => {
   const season = showSeasons;
   beforeEach(() => {
     const localVue = createLocalVue();
-  
-    seasonWrapper= shallowMount(Season, {
+
+    seasonWrapper = shallowMount(Season, {
       localVue,
       propsData: {
         season
@@ -22,13 +22,13 @@ describe("It is ued to test Season.vue", () => {
   it("is a Vue instance", () => {
     expect(seasonWrapper.isVueInstance).toBeTruthy();
   });
-  
+
   it("Used to display test season number", () => {
     expect(seasonWrapper.find(".season-number").exists()).toBe(true);
   });
 
 
- it("Used to display test card-border", () => {
+  it("Used to display test card-border", () => {
     expect(seasonWrapper.find(".card-border").exists()).toBe(true);
   });
 });
