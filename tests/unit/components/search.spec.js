@@ -3,6 +3,7 @@ import { BootstrapVue, IconsPlugin } from "bootstrap-vue";
 import search from "@/components/Search.vue";
 import VueRouter from "vue-router";
 import { routes } from "@/router/index";
+
 jest.mock("axios", () => ({
   get: () =>
     Promise.resolve({
@@ -28,15 +29,14 @@ jest.mock("axios", () => ({
       ]
     })
 }));
-
 describe("Search.vue component testing", () => {
   let searchWrapper;
   const router = new VueRouter({ routes });
+  const localVue = createLocalVue();
+  localVue.use(VueRouter);
+  localVue.use(BootstrapVue);
+  localVue.use(IconsPlugin);
   beforeEach(() => {
-    const localVue = createLocalVue();
-    localVue.use(VueRouter);
-    localVue.use(BootstrapVue);
-    localVue.use(IconsPlugin);
     searchWrapper = shallowMount(search, {
       localVue,
       router

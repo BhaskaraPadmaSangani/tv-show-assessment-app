@@ -45,11 +45,6 @@ export default {
   },
   methods: {
     async getSearchedShows() {
-      //why we are using "map" directly we can store in shows array no,but if we are doing
-      // the shows are not getting in output
-      //await searchShows(this.$route.params.query).then((res) => {
-      //this.shows = res.data
-      //});
       await searchShows(this.$route.params.query).then((res) => {
         this.shows = res.data.map((shows) => shows.show);
       });

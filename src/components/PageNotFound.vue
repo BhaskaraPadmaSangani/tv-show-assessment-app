@@ -1,8 +1,6 @@
 <template>
   <div class="home" fluid>
     <div class="ml-4 pl-1">
-      <!-- why this is not working
-        @click="this.$router.push({ name: 'DisplayAllShows' })"-->
       <b-button
         variant="warning"
         class="mb-4"

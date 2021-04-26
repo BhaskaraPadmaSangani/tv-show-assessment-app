@@ -1,13 +1,14 @@
 import { shallowMount, createLocalVue } from "@vue/test-utils";
 import { BootstrapVue, IconsPlugin, BButton } from "bootstrap-vue";
 import VueRouter from "vue-router";
+import { routes } from "@/router/index";
 
 import Header from "@/components/Header.vue";
 
 describe("Header.vue", () => {
   let headerWrapper;
-  ////why we are using search path here
-  const router = new VueRouter({ path: "/search/:query", name: "Search" });
+  const router = new VueRouter({ routes });
+
   beforeEach(() => {
     const localVue = createLocalVue();
     localVue.use(BootstrapVue);
@@ -27,11 +28,13 @@ describe("Header.vue", () => {
   });
 
   it("has called serched function", () => {
-    const search = jest.fn();
-    headerWrapper.setMethods({
-      search: search
-    });
-    headerWrapper.find(BButton).trigger("click");
+    headerWrapper.vm.search = jest.fn();
+    headerWrapper.findComponent(BButton).trigger("click");
     expect(headerWrapper.vm.search).toHaveBeenCalled();
   });
+  it('should call router.push() in search()', () => {
+    headerWrapper.vm.$router.push = jest.fn()
+    headerWrapper.vm.search();
+    expect(headerWrapper.vm.$router.push).toHaveBeenCalled();
+  })
 });

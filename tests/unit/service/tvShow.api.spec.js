@@ -12,7 +12,7 @@ describe('In tvShow.api.js file testing', () => {
     })
 
     it('Mocking getAllShows method ', () => {
-        const mockShowData= ["Game of Thrones", "Breaking Bad", "The Wire"];
+        const mockShowData = ["Game of Thrones", "Breaking Bad", "The Wire"];
         axios.get.mockResolvedValue(mockShowData);
         getAllShows().then(response => {
             expect(response).toEqual(mockShowData);

@@ -6,9 +6,8 @@
 </template>
 
 <script>
-//import formattedDate from "../filters/dateFilter.js";
 export default {
-  name: "Footer"
+  name: "Footer",
 };
 </script>
 <style scoped>
@@ -21,7 +20,7 @@ export default {
   text-align: center;
   font-size: 0.8em;
 }
-.mt-4{
-    margin-top:-20px;
+.mt-4 {
+  margin-top: -20px;
 }
 </style>

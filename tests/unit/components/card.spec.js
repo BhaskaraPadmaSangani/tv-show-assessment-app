@@ -2,12 +2,13 @@ import { shallowMount, createLocalVue } from "@vue/test-utils";
 import { BootstrapVue, IconsPlugin } from "bootstrap-vue";
 import Card from "@/components/Card.vue";
 import { showDetails } from "../api-data.js";
-//import VueRouter from "vue-router";
+import VueRouter from "vue-router";
+import { routes } from "@/router/index";
 
-describe("ShowCard.vue", () => {
+describe("Card.vue", () => {
   let cardWrapper;
-  //const router = new VueRouter(
-  //{path: "/shows/:id", name: "FullDetailsOfShow"});
+  const router = new VueRouter({ routes });
+
   const show = showDetails;
   beforeEach(() => {
     const localVue = createLocalVue();
@@ -16,6 +17,7 @@ describe("ShowCard.vue", () => {
 
     cardWrapper = shallowMount(Card, {
       localVue,
+      router,
       propsData: {
         show
       },
@@ -48,13 +50,10 @@ describe("ShowCard.vue", () => {
     );
   });
 
-  // This is used to test the router path for getMoreDetailsButton
-  xit("Has called displayCardDetailsfunction", () => {
-    const displayCardDetails = jest.fn();
-    cardWrapper.setMethods({
-      displayCardDetails: displayCardDetails
-    });
-    cardWrapper.find(BButton).trigger("click");
-    expect(cardWrapper.vm.displayCardDetails).toHaveBeenCalled();
+  // This is used to test the router path for button
+  it('should call router.push() in displayCardDetails()', () => {
+    cardWrapper.vm.$router.push = jest.fn()
+    cardWrapper.vm.displayCardDetails()
+    expect(cardWrapper.vm.$router.push).toHaveBeenCalled();
   });
 });

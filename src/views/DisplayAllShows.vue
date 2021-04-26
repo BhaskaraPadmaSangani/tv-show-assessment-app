@@ -8,10 +8,9 @@
         </strong>
       </h4>
       <div v-if="popularShows.length > 0">
-        <h3 class="text">Popular Shows</h3>
+        <b-button variant="warning"> <h2>Popular Shows</h2></b-button>
         <div>
-          <!--this is for based on screen size-->
-            <b-row>
+          <b-row>
             <b-col
               lg="2"
               md="4"
@@ -32,7 +31,9 @@
       </div>
       <div v-if="genres.length > 0">
         <div v-for="genre in genres" :key="genre.index">
-          <h3 class="text">{{ genre.name }}</h3>
+          <b-button variant="warning">
+            <h3>{{ genre.name }}</h3></b-button
+          >
           <div>
             <b-row>
               <b-col
@@ -40,7 +41,8 @@
                 md="4"
                 sm="6"
                 v-for="show in genre.shows"
-                :key="show.index" class="myColumn"
+                :key="show.index"
+                class="myColumn"
               >
                 <card :show="show"></card>
               </b-col>
@@ -67,26 +69,25 @@ export default {
     Card,
   },
   mounted() {
+    // To getAllShows data from the api
     getAllShows().then((response) => {
       this.shows = response.data;
       this.popularShows = this.mostRatedShows(this.shows);
     });
   },
   computed: {
+    // To get all genres title
     genresTitle() {
       const genre = Array.from(
         new Set(this.shows.flatMap((show) => show.genres))
       );
       return genre.sort();
     },
+    // Based on genre to get shows in sorted order by passing them to mostRatedShows()
     genres() {
       return this.genresTitle.map((genre) => {
         return {
-          //Action is stored in name first
           name: genre,
-          //from a-z 1 show name is passed if that show contains this action genre then this is
-          //sorted based on average by passing it to mostratedshow() method and again stored in shows
-          //data propertie for printing.
           shows: this.mostRatedShows(
             this.shows.filter((show) => show.genres.includes(genre))
           ),
@@ -116,10 +117,11 @@ h4 {
   padding-left: 10px;
 }
 .text {
-  color: rgb(30, 1, 12);
+  text-align: center;
+  color: rgb(112, 12, 184);
 }
-.myColumn{
-margin-bottom:10px;
-margin-top:10px;
+.myColumn {
+  margin-bottom: 10px;
+  margin-top: 10px;
 }
 </style>

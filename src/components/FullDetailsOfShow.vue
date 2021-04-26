@@ -3,21 +3,21 @@
     <b-row>
       <div class="ml-3 backButton">
         <div>
-        <b-button  class="mt-4" variant="success" @click="$router.go(-1)">
-          <b-icon icon="arrow-left"></b-icon>
-        </b-button>
+          <b-button class="mt-4" variant="success" @click="$router.go(-1)">
+            <b-icon icon="arrow-left"></b-icon>
+          </b-button>
         </div>
       </div>
     </b-row>
     <br />
     <template v-if="show">
       <b-container fluid>
-        <!--<b-row>
-          <p class="align-poster"> Show Poster</p></b-row>-->
         <b-row>
           <b-col lg="4" md="6" sm="6">
-             <p class="align-poster"> Show Poster</p>
-            <img Show Image
+            <p>Show Poster</p>
+            <img
+              Show
+              Image
               :src="show.image.medium || show.image.original"
               v-if="show.image"
             />
@@ -26,11 +26,9 @@
             </div>
           </b-col>
           <b-col lg="8" md="6" sm="6">
-            <!--<div class="text" type="dark" variant="info"><h2><b>Full Details Of Show</b></h2></div>
-            // help me in coloring-->
-            
-            <div class="text-warning"><h2><b>Full Details Of Show</b></h2></div>
-             <!--<div class="text">Full Details Of Show</div>-->
+            <div class="text-warning">
+              <h2><b>Full Details Of Show</b></h2>
+            </div>
             <h3>{{ show.name }}</h3>
             <div class="align">
               <span>
@@ -42,13 +40,13 @@
               </span>
               <span v-else class="ml-1">NA</span>
               <div>
-              <span>
-                <b>premiered on:</b>
-              </span>
-              <span v-if="show.premiered">
-                {{ show.premiered }}
-              </span>
-              <span v-else class="ml-1">NA</span>
+                <span>
+                  <b>premiered on:</b>
+                </span>
+                <span v-if="show.premiered">
+                  {{ show.premiered }}
+                </span>
+                <span v-else class="ml-1">NA</span>
               </div>
               <span>
                 <b>Genre :</b>
@@ -59,32 +57,32 @@
               <span v-else class="ml-1">NA</span>
               <div>
                 <span v-if="show.language">
-                  <b>Language :</b>{{show.language}}</span>
+                  <b>Language :</b>{{ show.language }}</span
+                >
               </div>
-              <!--
-                //when i kept this in seson and cast red color is comming why?-->
-                <div v-if="show.schedule">
+              <div v-if="show.schedule">
                 <b>Schedule :</b>
                 <span
                   v-for="tvSchedule in show.schedule.days"
                   :key="tvSchedule.index"
                 >
-    
-                  {{tvSchedule}}
-                  <span v-if="show.schedule.time"> at {{show.schedule.time}}</span>
-                   </span>
-            </div>
+                  {{ tvSchedule }}
+                  <span v-if="show.schedule.time">
+                    at {{ show.schedule.time }}</span
+                  >
+                </span>
+              </div>
               <div>
-                 <span class="black--text" v-if="show.status">
-                <b>Status :</b>
-                {{show.status}}
-              </span>
+                <span class="black--text" v-if="show.status">
+                  <b>Status :</b>
+                  {{ show.status }}
+                </span>
               </div>
               <div>
                 <span class="black--text" v-if="show.officialSite">
-                <b>Official Site :</b> 
-                <a :href="show.officialSite">{{show.officialSite}}</a>
-              </span>
+                  <b>Official Site :</b>
+                  <a :href="show.officialSite">{{ show.officialSite }}</a>
+                </span>
               </div>
             </div>
             <div class="mt-5 summary">
@@ -183,12 +181,8 @@ export default {
 </script>
 
 <style scoped>
-.align{
+.align {
   text-align: left;
-  margin-left:30%;
-}
-.align-poster{
-  text-align: center;
- margin-left: 10px !important
+  margin-left: 30%;
 }
 </style>

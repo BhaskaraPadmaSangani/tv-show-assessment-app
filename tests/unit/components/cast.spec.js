@@ -7,17 +7,17 @@ describe("It is ued to test Cast.vue", () => {
   let cast;
   let wrapper;
   cast = Object.assign({}, showCast);
-  beforeEach(()=>{
-  const localVue = createLocalVue();
-  localVue.use(BootstrapVue);
-  localVue.use(IconsPlugin);
+  beforeEach(() => {
+    const localVue = createLocalVue();
+    localVue.use(BootstrapVue);
+    localVue.use(IconsPlugin);
 
-  wrapper = shallowMount(Cast, {
-    localVue,
-    propsData: {
-      cast
-    }
-  });
+    wrapper = shallowMount(Cast, {
+      localVue,
+      propsData: {
+        cast
+      },
+    });
   });
   afterEach(() => {
     wrapper.destroy();
