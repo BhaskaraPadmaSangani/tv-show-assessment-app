@@ -14,9 +14,7 @@ export default {
 .footer {
   position: fixed;
   bottom: 0;
-  width: 100%;
   background-color: rgb(21, 174, 201);
-  color: #000;
   text-align: center;
   font-size: 0.8em;
 }

@@ -21,7 +21,7 @@
               <b-form-input
                 class="mr-1"
                 placeholder="Search"
-                v-model="searchQuery"
+                v-model="searchData"
               ></b-form-input>
               <b-button
                 size="sm"
@@ -42,7 +42,7 @@ export default {
   name: "Header",
   data() {
     return {
-      searchQuery: "",
+      searchData: "",
     };
   },
   methods: {
@@ -50,10 +50,10 @@ export default {
       this.$router.push({
         name: "Search",
         params: {
-          query: this.searchQuery,
+          query: this.searchData,
         },
       });
-      this.searchQuery = "";
+      this.searchData= "";
     },
   },
 };

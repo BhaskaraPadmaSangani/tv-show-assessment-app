@@ -30,7 +30,7 @@ const routes = [
     component: PageNotFound
   }
 ];
-
+//storing the previous data when do any operation this is used
 const router = new VueRouter({
   mode: "history",
   base: process.env.BASE_URL,

@@ -1,17 +1,18 @@
 <template>
   <div class="home" fluid>
-    <div class="ml-4 pl-1">
+    <div class="ml-4">
+      <router-link to="/">
       <b-button
         variant="warning"
         class="mb-4"
-        @click="$router.replace({ name: 'DisplayAllShows' })"
       >
         Home
       </b-button>
+      </router-link>
     </div>
     <div class="heading">
       <h2>
-        <em>!!!!!!! Tv Show your are searching for are not found !!!!!!!!</em>
+        !!!!!!! Tv Show your are searching for are not found !!!!!!!!
       </h2>
     </div>
   </div>
@@ -25,11 +26,10 @@ export default {
 <style scoped>
 .heading {
   text-align: center;
-  padding: 5rem;
   color: rgb(24, 250, 250);
-  min-height: 100vh;
 }
 .home {
   background-color: rgb(54, 44, 61);
+  height:100vh;
 }
 </style>

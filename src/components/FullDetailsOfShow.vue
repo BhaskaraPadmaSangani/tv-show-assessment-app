@@ -156,6 +156,7 @@ export default {
       rating: "",
       premiered: "",
       genre: "",
+      dob:"",
     };
   },
   created() {

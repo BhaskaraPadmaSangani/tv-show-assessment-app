@@ -1,15 +1,20 @@
 import { shallowMount, createLocalVue } from "@vue/test-utils";
 import { BootstrapVue, IconsPlugin } from "bootstrap-vue";
 import pageNotFound from "@/components/PageNotFound.vue";
+import VueRouter from "vue-router";
+import { routes } from "@/router/index";
 
 describe("Footer.vue", () => {
   let wrapper;
+  const router = new VueRouter({ routes });
   beforeEach(() => {
     const localVue = createLocalVue();
     localVue.use(BootstrapVue);
     localVue.use(IconsPlugin);
     wrapper = shallowMount(pageNotFound, {
-      localVue
+      localVue,
+      router,
+      stubs: ["router-link"]
     });
   });
 
