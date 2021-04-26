@@ -32,8 +32,8 @@
       <div v-if="genres.length > 0">
         <div v-for="genre in genres" :key="genre.index">
           <b-button variant="warning">
-            <h3>{{ genre.name }}</h3></b-button
-          >
+            <h5>{{ genre.name }}</h5>
+          </b-button>
           <div>
             <b-row>
               <b-col
@@ -72,23 +72,23 @@ export default {
     // To getAllShows data from the api
     getAllShows().then((response) => {
       this.shows = response.data;
-      this.popularShows = this.mostRatedShows(this.shows);
+      this.popularShows = this.topRatedShows(this.shows);
     });
   },
   computed: {
     // To get all genres title
-    genresTitle() {
+    genresTitles() {
       const genre = Array.from(
         new Set(this.shows.flatMap((show) => show.genres))
       );
       return genre.sort();
     },
-    // Based on genre to get shows in sorted order by passing them to mostRatedShows()
+    // Based on genre to get shows in sorted order by passing them to topRatedShows()
     genres() {
-      return this.genresTitle.map((genre) => {
+      return this.genresTitles.map((genre) => {
         return {
           name: genre,
-          shows: this.mostRatedShows(
+          shows: this.topRatedShows(
             this.shows.filter((show) => show.genres.includes(genre))
           ),
         };
@@ -97,7 +97,7 @@ export default {
   },
   methods: {
     // method to sort all shows based on rating
-    mostRatedShows(shows) {
+    topRatedShows(shows) {
       return shows
         .filter((show) => show.rating.average)
         .sort((previousValue, nextValue) =>

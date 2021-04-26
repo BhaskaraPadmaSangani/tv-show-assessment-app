@@ -19,7 +19,7 @@ export const searchShows = [
   }
 ];
 
-export const homeShows = [
+export const Shows = [
   {
     id: 1,
     genres: ["Action", "Drama"],
@@ -43,7 +43,7 @@ export const homeShows = [
   }
 ];
 
-export const homeShowsInRandom = [
+export const ShowsInRandom = [
   {
     id: 3,
     genres: ["Thriller", "Action"],
@@ -68,8 +68,8 @@ export const homeShowsInRandom = [
 ];
 
 export const showGenres = ["Action", "Drama", "Thriller"];
-//based on genres in atoz order and rating it will show if rating is null then it wont show that show
-export const homeShowsByGenres = [
+
+export const ShowsByGenres = [
   {
     name: "Action",
     shows: [
@@ -114,8 +114,8 @@ export const homeShowsByGenres = [
     ]
   }
 ];
-//it will short shows based on rating in descending and it wont give shows which dont have rating
-export const sortedHomeShows = [
+
+export const sortedShows = [
   {
     id: 2,
     genres: ["Thriller", "Action"],

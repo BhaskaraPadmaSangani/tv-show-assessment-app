@@ -137,9 +137,9 @@
 import Season from "./Season.vue";
 import Cast from "./Cast.vue";
 import {
-  getShowDetails,
-  getShowSeason,
-  getShowCasts,
+  getShowDetailsById,
+  getShowSeasonById,
+  getShowCastsById,
 } from "../service/tvShow.api.js";
 
 export default {
@@ -163,17 +163,15 @@ export default {
   },
   methods: {
     async showDetails(id) {
-      await getShowDetails(id).then((response) => {
+      await getShowDetailsById(id).then((response) => {
         this.show = response.data;
       });
-      await getShowSeason(id).then((response) => {
+      await getShowSeasonById(id).then((response) => {
         this.seasons = response.data;
       });
-      await getShowCasts(id).then((response) => {
+      await getShowCastsById(id).then((response) => {
         this.casts = response.data;
       });
-      this.rating = this.show.rating.average;
-      this.premiered = this.show.premiered;
       this.genre = this.show.genres;
     },
   },

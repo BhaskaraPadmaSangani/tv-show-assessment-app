@@ -58,7 +58,7 @@ export default {
 
 <style scoped>
 .myCard {
-  height: 100%;
+  height: 80%;
   background-color: rgb(54, 44, 61);
 }
 img:hover {

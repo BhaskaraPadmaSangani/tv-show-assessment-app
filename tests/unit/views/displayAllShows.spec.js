@@ -5,11 +5,11 @@ import moxios from "moxios";
 import displayAllShows from "@/views/DisplayAllShows.vue";
 
 import {
-  homeShows,
-  homeShowsInRandom,
+  Shows,
+  ShowsInRandom,
   showGenres,
-  homeShowsByGenres,
-  sortedHomeShows
+  ShowsByGenres,
+  sortedShows
 } from "../api-data.js";
 
 describe("DisplayAllShows.vue testing", () => {
@@ -47,7 +47,7 @@ describe("DisplayAllShows.vue testing", () => {
       let request = moxios.requests.mostRecent();
       request.respondWith({
         status: 200,
-        response: homeShows
+        response: Shows
       })
         .then(function () {
           expect(displayAllShowsWrapper.vm.shows.length).toBe(3);
@@ -59,26 +59,26 @@ describe("DisplayAllShows.vue testing", () => {
    // this is setting the "shows" in displayAllShowsWrapper to be homeShows
   it("genre titles", () => {
     displayAllShowsWrapper.setData({
-      shows: homeShows
+      shows: Shows
     });
-    expect(displayAllShowsWrapper.vm.genresTitle).toStrictEqual(showGenres);
+    expect(displayAllShowsWrapper.vm.genresTitles).toStrictEqual(showGenres);
   });
 
   // this is setting the "shows" in displayAllShowsWrapper to be homeShows so to test genres
   it("getting the  genres", () => {
     displayAllShowsWrapper.setData({
-      shows: homeShows
+      shows: Shows
     });
-    expect(displayAllShowsWrapper.vm.genres).toStrictEqual(homeShowsByGenres);
+    expect(displayAllShowsWrapper.vm.genres).toStrictEqual(ShowsByGenres);
   });
 // used to test most rated shows based on rating
   it("return mostly rated shows based on ratings", () => {
-    let data = homeShows;
-    let sorted = displayAllShowsWrapper.vm.mostRatedShows(data);
-    expect(sorted).toStrictEqual(sortedHomeShows);
+    let data = Shows;
+    let sorted = displayAllShowsWrapper.vm.topRatedShows(data);
+    expect(sorted).toStrictEqual(sortedShows);
 
-    let dataInRandom = homeShowsInRandom;
-    sorted = displayAllShowsWrapper.vm.mostRatedShows(dataInRandom);
-    expect(sorted).toStrictEqual(sortedHomeShows);
+    let dataInRandom = ShowsInRandom;
+    sorted = displayAllShowsWrapper.vm.topRatedShows(dataInRandom);
+    expect(sorted).toStrictEqual(sortedShows);
   });
 });

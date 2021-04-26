@@ -1,4 +1,4 @@
-import { searchShows, getAllShows, getShowCasts } from '../../../src/service/tvShow.api.js';
+import { searchShows, getAllShows, getShowCastsById } from '../../../src/service/tvShow.api.js';
 import axios from 'axios';
 jest.mock('axios');
 
@@ -22,7 +22,7 @@ describe('In tvShow.api.js file testing', () => {
     it('Mocking getShowCasts method ', () => {
         const mockShowData = [{ name: "Breaking Bad", id: "2" }, { name: "GOT", id: "3" }];
         axios.get.mockResolvedValue(mockShowData);
-        getShowCasts(2).then(response => {
+        getShowCastsById(2).then(response => {
             expect(response).toEqual(mockShowData);
         })
     })
