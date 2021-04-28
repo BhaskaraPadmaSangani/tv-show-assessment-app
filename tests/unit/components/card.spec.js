@@ -8,7 +8,6 @@ import { routes } from "@/router/index";
 describe("Card.vue", () => {
   let cardWrapper;
   const router = new VueRouter({ routes });
-
   const show = showDetails;
   beforeEach(() => {
     const localVue = createLocalVue();

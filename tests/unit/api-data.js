@@ -5,7 +5,7 @@ export const searchShows = [
       id: 240,
       url: "http://www.tvmaze.com/shows/240/cops",
       name: "Cops",
-      genres: ["Action", "Drama"]
+      genres: ["Action", "Crime"]
     }
   },
   {
@@ -14,7 +14,7 @@ export const searchShows = [
       id: 241,
       url: "http://www.tvmaze.com/shows/241/benched",
       name: "Benched",
-      genres: ["Thriller", "Comedy"]
+      genres: ["Comedy", "Legal"]
     }
   }
 ];

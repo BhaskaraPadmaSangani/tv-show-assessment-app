@@ -11,7 +11,6 @@ describe("It is ued to test Cast.vue", () => {
     const localVue = createLocalVue();
     localVue.use(BootstrapVue);
     localVue.use(IconsPlugin);
-
     wrapper = shallowMount(Cast, {
       localVue,
       propsData: {
